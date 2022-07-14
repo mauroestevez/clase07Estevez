@@ -1,6 +1,6 @@
 
 
-// Armamos el creador de objeto para los clientes
+// Armamos el creador de objetos para los clientes
 
 class Cliente {
     constructor(nombre, edad) {
