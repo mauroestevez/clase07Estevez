@@ -20,9 +20,44 @@ const karina = new Cliente("Karina", "46");
 const franco = new Cliente("Franco", "18");
 const pablo = new Cliente("Pablo", "44");
 
+
+
+
+
+let botonInicial = document.getElementById("btnInicial")
+botonInicial.addEventListener("click", despejar)
+function despejar(){
+    let primerParrafo = document.getElementById("primerParrafo");
+    let segundoParrafo = document.getElementById("segundoParrafo");
+    primerParrafo.remove();
+    segundoParrafo.remove();
+    botonInicial.remove();
+    let formulario = document.createElement("form");
+    formulario.innerHTML = "<form id = nombre><input type=text><input type=submit value=Enviar></form>";
+    let padreDiv = document.getElementById("padreDiv");
+    padreDiv.append(formulario);
+    // let input1 = document.getElementById("nombre");
+    // input1.addEventListener("input", () => {
+    //     let entrada = document.createElement("p");
+    //     entrada.innerText = "Hola " + input1.value;
+    //     padreDiv.append(entrada);
+    // })
+    let input1 = document.getElementById("nombre");
+    input1.addEventListener("submit", validar);
+    function validar(e){
+        e.preventDefault();
+        // let entradita = document.createElement("p");
+        // entrada.innerText = "Hola " + e.target.value;
+        // padreDiv.append(entradita);
+        console.log("hola");
+        
+    }
+
+}
+
 // Definimos una variable con el nombre del usuario
 
-let entrada = prompt("Ingrese su nombre por favor... (debe ser cliente del banco)");
+// let entrada = prompt("Ingrese su nombre por favor... (debe ser cliente del banco)");
 
 // Creamos un array con los clientes del banco
 
